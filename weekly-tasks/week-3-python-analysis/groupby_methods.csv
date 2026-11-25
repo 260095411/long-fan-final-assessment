@@ -1,0 +1,4 @@
+method,attempts,refused,refusal_rate_percent
+facial_age_estimation,10,7,70.0
+photo_id,5,2,40.0
+payment_instrument,5,2,40.0

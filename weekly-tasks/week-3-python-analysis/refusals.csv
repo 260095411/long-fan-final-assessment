@@ -1,0 +1,12 @@
+timestamp,method,decision,estimated_age,true_age
+2026-11-18T10:05:38Z,facial_age_estimation,denied,15,19
+2026-11-18T09:21:40Z,facial_age_estimation,denied,16,26
+2026-11-18T09:26:55Z,facial_age_estimation,denied,16,15
+2026-11-18T09:48:19Z,facial_age_estimation,denied,16,16
+2026-11-18T09:14:22Z,facial_age_estimation,denied,17,22
+2026-11-18T09:24:12Z,photo_id,denied,17,17
+2026-11-18T09:31:09Z,payment_instrument,denied,17,26
+2026-11-18T09:40:02Z,facial_age_estimation,denied,17,18
+2026-11-18T09:52:07Z,photo_id,denied,17,25
+2026-11-18T10:01:13Z,payment_instrument,denied,17,17
+2026-11-18T10:13:26Z,facial_age_estimation,denied,17,23

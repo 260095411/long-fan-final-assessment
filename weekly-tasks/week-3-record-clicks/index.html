@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Week 3 — Recording clicks as data</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 60px auto; padding: 0 20px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+  button { font-size: 15px; padding: 9px 16px; border-radius: 6px; border: 1px solid #333; background: #fff; cursor: pointer; }
+  button.primary { background: #16150f; color: #fff; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th, td { border-bottom: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #666; }
+  .note { color: #666; font-size: 13px; }
+  pre { background: #f5f3ee; padding: 12px; font-size: 12px; overflow-x: auto; }
+</style>
+</head>
+<body>
+  <h1>Week 3 — Recording clicks as data</h1>
+  <p class="note">Each click becomes a record, not just a number. Records persist in <code>localStorage</code> and can be exported. This is the Week 3 exercise, adapted into the data layer the final prototype would need if it logged gate attempts.</p>
+
+  <div class="row">
+    <button id="click-button" class="primary">Record a click</button>
+    <button id="download-json">Download JSON</button>
+    <button id="download-csv">Download CSV</button>
+    <button id="clear">Clear</button>
+  </div>
+
+  <p id="summary" class="note">No records yet.</p>
+
+  <table>
+    <thead><tr><th>#</th><th>Count</th><th>Time (ISO)</th><th>Event</th></tr></thead>
+    <tbody id="records-body"></tbody>
+  </table>
+
+  <h2>Raw JSON</h2>
+  <pre id="raw"></pre>
+
+  <script src="script.js"></script>
+</body>
+</html>

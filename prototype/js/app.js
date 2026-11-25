@@ -24,7 +24,26 @@ function init() {
   renderGate();
   renderFlow();
   bindControls();
-  $("#stage-caption").innerHTML = "Press <strong>Run the check</strong> to step through the exchange.";
+
+  // Test routes: allow a state to be reproduced without clicking,
+  // e.g. index.html?view=reworked&demo=run  or  ?demo=reject
+  const params = new URLSearchParams(location.search);
+  const view = params.get("view");
+  if (view === "reworked" || view === "default") {
+    state.view = view;
+    $$(".seg").forEach((b) => b.classList.toggle("is-active", b.dataset.view === view));
+    renderGate();
+    renderFlow();
+  }
+  const demo = params.get("demo");
+  if (params.has("demo")) document.body.classList.add("no-anim");
+  if (demo === "run") {
+    setTimeout(() => runCheck(true), 200);
+  } else if (demo === "reject") {
+    setTimeout(simulateRejection, 200);
+  } else {
+    $("#stage-caption").innerHTML = "Press <strong>Run the check</strong> to step through the exchange.";
+  }
 }
 
 /* ---------- 2. Method chips ---------- */
@@ -186,18 +205,20 @@ function resetFlow() {
   $("#gate-content").classList.add("is-locked");
   $$(".step").forEach((s) => s.classList.remove("is-on"));
   $$(".node").forEach((n) => n.classList.remove("is-on"));
+  const lockedNote = document.querySelector(".locked-note");
+  if (lockedNote) lockedNote.style.display = "";
   updateMeters(flowForView(), 0);
   $("#stage-caption").innerHTML = "Press <strong>Run the check</strong> to step through the exchange.";
 }
 
-function runCheck() {
+function runCheck(instant) {
   if (state.running) return;
   state.running = true;
   state.rejected = false;
   const steps = flowForView();
   const stepEls = $$(".step");
   const nodeEls = $$(".node");
-  const delayed = (i) => 420 * (i + 1);
+  const delayed = (i) => (instant ? 0 : 420 * (i + 1));
 
   steps.forEach((s, i) => {
     setTimeout(() => {
@@ -232,6 +253,8 @@ function finishCheck() {
     ? `<strong>Verified</strong> The evaluator returned a pass. The service stored the result against your visit, and the content is now unlocked.`
     : `<strong>Proof accepted</strong> The service checked a signature and stored only a valid state. The original capture stayed with the evaluator.`;
   $("#gate-content").classList.remove("is-locked");
+  const note = document.querySelector(".locked-note");
+  if (note) note.style.display = "none";
   $("#stage-caption").innerHTML = state.view === "default"
     ? "Six hops, three parties, and a record. The bit arrived; the image and the refusal are invisible."
     : "Four hops and a proof. What disappeared was the document at the gate; what remained is the first capture, the record, and the silence of a refused adult.";

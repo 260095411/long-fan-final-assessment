@@ -69,7 +69,7 @@ The prototype is static. There is **no backend, no database, no build step, no p
 | Requirement | Version | Needed for |
 |---|---|---|
 | A modern browser | Chrome, Edge, Firefox or Safari (2023 or later) | Viewing the prototype |
-| Python 3 + `pandas` | 3.10+ | Only the `weekly-tasks/week-3-python-analysis` task |
+| Python 3 | 3.10+ | Only the `weekly-tasks/week-3-python-analysis` task (standard library only — no packages) |
 | VS Code | any recent version | Only if you want to edit the code locally |
 
 No libraries or packages are used by the prototype itself. No API keys. No network access is required
@@ -159,10 +159,9 @@ the prototype.
 
 Harvard style; full list also appears in the prototype's Sources section.
 
-- Competition and Markets Authority (2020) *Online platforms and digital advertising market study*. London: CMA.
 - Information Commissioner's Office (2021) *Age appropriate design: a code of practice for online services*. Wilmslow: ICO.
-- Information Commissioner's Office (2026) *What is valid consent?* Wilmslow: ICO.
+- Information Commissioner's Office (n.d.) *What is valid consent?* Wilmslow: ICO.
 - Knight-Georgetown Institute (2026) *Age Assurance Online: A Technical Assessment of Current Systems and their Limitations*. Washington, DC: KGI.
 - Ofcom (2026) *Age assurance duties under the Online Safety Act*. London: Ofcom.
 - Ofcom and Information Commissioner's Office (2026) *Age assurance: a joint statement*. London: Ofcom.
-- Zuboff, S. (2019) *The Age of Surveillance Capitalism*. New York: PublicAffairs.
+- Rescorla, E., Arnao, Z. and Cooper, A. (2026) *Age Assurance Online: A Technical Assessment of Current Systems and their Limitations*. Washington, DC: Knight-Georgetown Institute.
