@@ -1,0 +1,16 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node (in case a helper is added later)
+node_modules/
+
+# Exported archives should not be committed
+*.zip

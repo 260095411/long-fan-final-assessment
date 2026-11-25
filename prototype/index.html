@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Yes/No Contract — age assurance prototype</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <p class="kicker">MA Internet Equalities · Critical Coding Practices · Stack 2</p>
+    <h1>The Yes/No Contract</h1>
+    <p class="lede">An age gate advertises a single bit: <em>over 18</em>, or not.
+      This prototype follows that bit backwards, to the moment a face or a document
+      leaves the browser, and forwards again, to the moment a person is refused with no way to answer back.</p>
+    <p class="disclaimer">Simulated data only. No photographs, documents or personal details are collected or transmitted. Every uncertain step is labelled as uncertain.</p>
+  </div>
+</header>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="#gate">1 · The gate</a>
+    <a href="#issue">2 · The issue</a>
+    <a href="#evidence">3 · Evidence</a>
+    <a href="#unresolved">4 · Unresolved</a>
+    <a href="#sources">5 · Sources</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- ============ 1. GATE ============ -->
+  <section id="gate" class="section">
+    <div class="section-head">
+      <span class="num">01</span>
+      <div>
+        <h2>The gate, and what it exchanges</h2>
+        <p class="section-sub">Choose a check, run it, and watch the request cross three parties. Then switch the arrangement and run it again.</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="control-group">
+        <label class="control-label">Age signal</label>
+        <div id="method-chips" class="chips"></div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">Arrangement</label>
+        <div class="segmented" role="tablist">
+          <button class="seg is-active" data-view="default" role="tab">View A · As deployed</button>
+          <button class="seg" data-view="reworked" role="tab">View B · Credential</button>
+        </div>
+      </div>
+      <div class="control-group control-actions">
+        <button id="run" class="btn btn-primary">Run the check</button>
+        <button id="wrong" class="btn btn-ghost" title="Simulate a correct adult being estimated as under 18">Simulate a false rejection</button>
+        <button id="reset" class="btn btn-ghost">Reset</button>
+      </div>
+    </div>
+
+    <div class="stage">
+      <aside class="panel gate-panel">
+        <div class="panel-head">
+          <span class="dot-row"><i></i><i></i><i></i></span>
+          <span class="panel-title">reading-room.example / watch</span>
+        </div>
+        <div class="panel-body">
+          <div id="gate-screen" class="gate-screen">
+            <p class="gate-eyebrow">Restricted · 18+</p>
+            <h3 id="gate-title">Confirm your age to watch</h3>
+            <p id="gate-copy" class="gate-copy">We only receive a yes or no answer. Choose a method to continue.</p>
+            <div id="gate-actions" class="gate-actions">
+              <span class="ghost-field">Method</span>
+              <span class="ghost-field">Consent</span>
+              <button class="btn btn-primary" disabled>Verify</button>
+            </div>
+            <div id="gate-result" class="gate-result" hidden></div>
+          </div>
+          <div id="gate-content" class="gate-content is-locked">
+            <div class="content-stub"></div>
+            <div class="content-stub"></div>
+            <div class="content-stub short"></div>
+            <p class="locked-note">Content withheld until a decision is returned.</p>
+        </div>
+      </aside>
+
+      <div class="panel flow-panel">
+        <div class="panel-head">
+          <span class="panel-title">Behind the gate</span>
+          <span id="view-label" class="panel-meta">View A · As deployed</span>
+        </div>
+        <div class="panel-body">
+          <div id="flow-chain" class="flow-chain"></div>
+          <div id="flow-steps" class="flow-steps"></div>
+          <div class="meters">
+            <div class="meter"><span id="meter-fields">0</span><label>fields on the wire</label></div>
+            <div class="meter"><span id="meter-parties">0</span><label>parties involved</label></div>
+            <div class="meter"><span id="meter-records">0</span><label>records created</label></div>
+            <div class="meter"><span id="meter-denied">0</span><label>adults refused</label></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="stage-caption" id="stage-caption">Press <strong>Run the check</strong> to step through the exchange.</p>
+  </section>
+
+  <!-- ============ 2. ISSUE ============ -->
+  <section id="issue" class="section">
+    <div class="section-head">
+      <span class="num">02</span>
+      <div>
+        <h2>The issue this prototype investigates</h2>
+        <p class="section-sub">Not whether age checks are good or bad. One specific thing: the binary answer conceals both the record and the error.</p>
+      </div>
+    </div>
+
+    <div class="claim-box">
+      <p><strong>Claim.</strong> An age gate presents a threshold — a single bit — as if it were the whole exchange.
+        But the bit is produced by a third-party evaluator that received an image or a document,
+        is stored by the service against an account, and is returned as a decision the person cannot inspect or contest.
+        The threshold format is a <em>privacy claim</em> and a <em>dispute-suppression device</em> at the same time.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>What the interface shows</h3>
+        <ul id="visible-list" class="plain-list"></ul>
+      </div>
+      <div class="card">
+        <h3>What it does not show</h3>
+        <ul id="hidden-list" class="plain-list muted-list"></ul>
+      </div>
+    </div>
+
+    <h3 class="sub-head">Two arrangements, compared</h3>
+    <div class="table-wrap">
+      <table id="comparison-table" class="compare">
+        <thead><tr><th>Dimension</th><th>View A · As deployed</th><th>View B · Credential</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="reading-note" id="reading-note"></p>
+
+    <div class="callout">
+      <h3>Why a working website does not prove the claim</h3>
+      <p>A prototype shows that a flow <em>can</em> be arranged this way. It cannot show that one arrangement is safer,
+        fairer or more consentful. Those claims rest on the evidence below, and on what the evidence does not establish.
+        The purpose here is to make the exchange visible, not to recommend View B.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3. EVIDENCE ============ -->
+  <section id="evidence" class="section">
+    <div class="section-head">
+      <span class="num">03</span>
+      <div>
+        <h2>Evidence</h2>
+        <p class="section-sub">Each claim in the prototype is tied to a source, and each source is tied to a limit.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table id="evidence-table" class="evidence">
+        <thead><tr><th>Claim in the prototype</th><th>Source</th><th>What this establishes</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ 4. UNRESOLVED ============ -->
+  <section id="unresolved" class="section">
+    <div class="section-head">
+      <span class="num">04</span>
+      <div>
+        <h2>What remains unresolved</h2>
+        <p class="section-sub">Questions the prototype raises and cannot answer.</p>
+      </div>
+    </div>
+    <div id="unresolved-list" class="qa-list"></div>
+  </section>
+
+  <!-- ============ 5. SOURCES ============ -->
+  <section id="sources" class="section">
+    <div class="section-head">
+      <span class="num">05</span>
+      <div>
+        <h2>Sources</h2>
+        <p class="section-sub">Harvard style, as required by UAL.</p>
+      </div>
+    </div>
+    <ol id="source-list" class="source-list"></ol>
+    <footer class="site-footer">
+      <p>Long Fan · MA Internet Equalities · Critical Coding Practices · 2026</p>
+      <p class="tiny">Prototype built with HTML, CSS and JavaScript reading a local dataset. No backend, no analytics, no cookies.</p>
+    </footer>
+  </section>
+
+</main>
+
+<script src="js/data/age-assurance-flow.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
