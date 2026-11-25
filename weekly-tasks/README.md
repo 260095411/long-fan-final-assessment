@@ -1,19 +1,24 @@
 # Weekly tasks — why these five
 
-The unit asks for five selected weekly tasks, plus a short explanation of their relevance to the
-project. Each folder is self-contained: open `index.html` in a browser, or run the Python file.
+These are five tasks I produced during the unit (Weeks 3–7), copied here unaltered apart from removing
+build junk (`__pycache__`, `.vscode`). Together they trace the path from *an interaction becoming a
+record* to *a record becoming a rule* — which is the path the final prototype follows through an age gate.
 
-| Week | Task | What it does | Why this one |
+| Week | Folder | What I did | Why it matters to the final project |
 |---|---|---|---|
-| 2 | `week-2-click-counter` | One button, one event listener, one count | The smallest unit of the final prototype: an interaction being counted. Everything an age gate does begins with an event being recorded. |
-| 3 | `week-3-record-clicks` | Each click becomes a record with a timestamp, persisted in `localStorage`, exportable as JSON and CSV | The data layer the prototype describes: a decision written down. Doing it by hand made clear that a record is created by the code, not by the interface. |
-| 3 | `week-3-python-analysis` | Reads a CSV of simulated gate attempts, filters refusals, sorts them, and counts by method | Shows the limit of the data: a refusal rate is not an error rate. The dataset records what the gate decided, never whether it was right — which is the report's central uncertainty. |
-| 6 | `week-6-ranked-search` | Eight items ranked by adjustable weights (recency, engagement, source) | Where the "threshold" idea came from. A weighted rule produces a decision that looks like a fact; an age estimate is the same operation with a different input. |
-| 7 | `week-7-gate-wireframe` | HTML wireframe of the two gate arrangements | The Week 7 wireframing exercise, applied to this project. Drawing both frames side by side exposed the shared silence: neither frame shows a refusal route or a stored record. |
+| 3 | `week-3` | Built a click recorder that writes each interaction as JSON, then parsed it in Python (`parsing.py`, `parsing_annotated.py`) and wrote up what the data could and could not show (`task3_observations.md`) | This is the mechanism an age gate hides: an event becomes a row with a timestamp. Doing it by hand showed me that the record is created *before* the interface tells you anything about it. |
+| 4 | `week-4` | Worked with the RefugeeDataMinder archive: indexed records with an analytical framing, answered the set questions in `README_answers.md` | Archives classify before they describe. The age-gate dataset has the same property: the only fields it keeps are decision, method and timestamp — the person's own account is never a field. |
+| 5 | `week-5` | Data walk: located data centres, pulled Street View images, and analysed them in Python (`part1.py`, `part2.py`, 28 KB write-up) | Infrastructure has an address. The evaluator in the prototype is not a cloud — it is a building with a retention policy. |
+| 6 | `week-6` | Built the Flask news-search exercises: basic search → sorting → relevance score → date and text filters | Ranking is a rule with coefficients. An age estimate is the same operation applied to a face instead of a headline. |
+| 7 | `week-7` | Analysis of the Cambridge Analytica / BHWIBR prototypes (`analysis/analyse.py`) and a journey diagram (`journey.json`) | The two-view structure of my prototype comes directly from this exercise: default view, then a reworked view that reveals what the first one left invisible. |
 
-## What I would do differently
+## Why not Week 1, 2, 8 or 9
 
-The Week 5 data-walk exercise (Street View images of a data centre) is not included because the
-images could not be reproduced in the repository without re-hosting third-party content. The
-argument it supported — that infrastructure has a physical address — is carried in the report
-instead, through the evaluator's storage step rather than through a photograph.
+Week 1–2 were set-up exercises (publish a page, install Anaconda) and Week 8–9 were prototype tutorials
+built on the unit's example repositories. They did not produce a dataset or an argument of my own, so
+they would not show how the final project was arrived at.
+
+## Where the originals live
+
+Unchanged originals remain at `Term-1/Critical-Coding-Practices/week-3` … `week-7` in this repository.
+These copies exist so the submitted folder is self-contained.

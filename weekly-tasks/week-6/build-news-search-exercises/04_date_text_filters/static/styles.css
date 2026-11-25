@@ -1,0 +1,57 @@
+body {
+  margin: 24px;
+  color: #222;
+  background: white;
+  font: 16px/1.5 Arial, sans-serif;
+}
+
+.page-shell {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.search-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+input, select, button {
+  padding: 6px;
+  font: inherit;
+}
+
+.status, #result-count, .article-meta {
+  color: #666;
+  font-size: 14px;
+}
+
+.results-heading h2 {
+  display: inline;
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.article-card {
+  margin: 24px 0;
+}
+
+.article-title {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+
+.article-meta, .article-description {
+  margin: 4px 0;
+}

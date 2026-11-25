@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Page | User Actions</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Hello, I'm Ding</h1>
+  <p class="intro">Click Like, Share or Comment to record your interactions.</p>
+
+  <main class="panel">
+    <h2>Record an action</h2>
+    <div class="action-row">
+      <div class="action-item">
+        <button id="like-button" class="my-button" type="button">Like</button>
+        <p><strong id="like-count">0</strong> clicks</p>
+      </div>
+      <div class="action-item">
+        <button id="share-button" class="my-button" type="button">Share</button>
+        <p><strong id="share-count">0</strong> clicks</p>
+      </div>
+      <div class="action-item">
+        <button id="comment-button" class="my-button" type="button">Comment</button>
+        <p><strong id="comment-count">0</strong> clicks</p>
+      </div>
+    </div>
+    <p id="total-count" class="total-count" aria-live="polite">Total interactions: 0</p>
+
+    <h2>Recent interactions</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>Action</th><th>Click count for this action</th><th>Time (UTC)</th></tr>
+        </thead>
+        <tbody id="interactions-body">
+          <tr><td colspan="3">No clicks yet.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Export your data</h2>
+    <p class="small-note">Both files contain the same interactions, one row/object per click.</p>
+    <div class="download-row">
+      <button id="download-json-button" class="download-button" type="button">Download JSON</button>
+      <button id="download-csv-button" class="download-button" type="button">Download CSV</button>
+    </div>
+  </main>
+</body>
+</html>

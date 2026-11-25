@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #971515; /* Keep the Week 2 red background. */
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 22px 16px 50px;
+}
+
+.intro { margin-bottom: 24px; }
+
+.panel {
+  box-sizing: border-box;
+  max-width: 830px;
+  margin: 0 auto;
+  background: white;
+  color: #222;
+  padding: 22px 24px 32px;
+  border-radius: 12px;
+}
+
+h2 { font-size: 19px; margin-top: 14px; }
+
+.action-row, .download-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-item { flex: 1 1 150px; max-width: 220px; }
+.action-item p { margin: 9px 0; }
+.action-item strong { font-size: 22px; }
+
+/* Keep the familiar blue button style from Week 2. */
+.my-button {
+  background-color: blue;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.my-button:hover { background-color: #2020c8; }
+.total-count { font-weight: bold; margin: 18px 0 28px; }
+.table-wrapper { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+th, td { padding: 10px; border-bottom: 1px solid #ddd; }
+th { background: #f3f3f3; }
+.small-note { font-size: 14px; color: #555; }
+
+.download-button {
+  background-color: white;
+  color: #222;
+  padding: 12px 20px;
+  border: 2px solid #222;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.download-button:hover { background: #ededed; }
+

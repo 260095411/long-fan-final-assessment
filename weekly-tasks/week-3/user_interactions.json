@@ -1,0 +1,152 @@
+[
+  {
+    "action": "like",
+    "click_count": 1,
+    "time": "2026-10-15T13:55:55.238Z",
+    "review_status": "flagged"
+  },
+  {
+    "action": "like",
+    "click_count": 2,
+    "time": "2026-10-15T13:55:55.378Z",
+    "review_status": "flagged"
+  },
+  {
+    "action": "like",
+    "click_count": 3,
+    "time": "2026-10-15T13:55:55.522Z",
+    "review_status": "flagged"
+  },
+  {
+    "action": "like",
+    "click_count": 4,
+    "time": "2026-10-15T13:55:55.669Z",
+    "review_status": "approved"
+  },
+  {
+    "action": "like",
+    "click_count": 5,
+    "time": "2026-10-15T13:55:55.807Z",
+    "review_status": "flagged"
+  },
+  {
+    "action": "like",
+    "click_count": 6,
+    "time": "2026-10-20T23:49:55.875Z",
+    "review_status": "approved"
+  },
+  {
+    "action": "like",
+    "click_count": 7,
+    "time": "2026-10-20T23:49:56.426Z",
+    "review_status": "flagged"
+  },
+  {
+    "action": "like",
+    "click_count": 8,
+    "time": "2026-10-20T23:49:56.747Z",
+    "review_status": "flagged"
+  },
+  {
+    "action": "share",
+    "click_count": 1,
+    "time": "2026-10-20T23:49:57.335Z",
+    "review_status": "approved"
+  },
+  {
+    "action": "share",
+    "click_count": 2,
+    "time": "2026-10-20T23:49:57.805Z",
+    "review_status": "flagged"
+  },
+  {
+    "action": "share",
+    "click_count": 3,
+    "time": "2026-10-20T23:49:57.955Z",
+    "review_status": "flagged"
+  },
+  {
+    "action": "share",
+    "click_count": 4,
+    "time": "2026-10-20T23:49:58.109Z",
+    "review_status": "flagged"
+  },
+  {
+    "action": "share",
+    "click_count": 5,
+    "time": "2026-10-20T23:49:58.260Z",
+    "review_status": "flagged"
+  },
+  {
+    "action": "share",
+    "click_count": 6,
+    "time": "2026-10-20T23:49:58.418Z",
+    "review_status": "approved"
+  },
+  {
+    "action": "share",
+    "click_count": 7,
+    "time": "2026-10-20T23:49:58.562Z",
+    "review_status": "flagged"
+  },
+  {
+    "action": "share",
+    "click_count": 8,
+    "time": "2026-10-20T23:49:58.721Z",
+    "review_status": "approved"
+  },
+  {
+    "action": "share",
+    "click_count": 9,
+    "time": "2026-10-20T23:49:58.876Z",
+    "review_status": "flagged"
+  },
+  {
+    "action": "comment",
+    "click_count": 1,
+    "time": "2026-10-20T23:49:59.419Z",
+    "review_status": "flagged"
+  },
+  {
+    "action": "comment",
+    "click_count": 2,
+    "time": "2026-10-20T23:49:59.592Z",
+    "review_status": "approved"
+  },
+  {
+    "action": "comment",
+    "click_count": 3,
+    "time": "2026-10-20T23:49:59.759Z",
+    "review_status": "approved"
+  },
+  {
+    "action": "comment",
+    "click_count": 4,
+    "time": "2026-10-20T23:49:59.918Z",
+    "review_status": "flagged"
+  },
+  {
+    "action": "comment",
+    "click_count": 5,
+    "time": "2026-10-20T23:50:00.157Z",
+    "review_status": "flagged"
+  },
+  {
+    "action": "comment",
+    "click_count": 6,
+    "time": "2026-10-20T23:50:00.219Z",
+    "review_status": "approved"
+  },
+  {
+    "action": "comment",
+    "click_count": 7,
+    "time": "2026-10-20T23:50:00.378Z",
+    "review_status": "approved"
+  },
+  {
+    "action": "comment",
+    "click_count": 8,
+    "time": "2026-10-20T23:50:00.538Z",
+    "review_status": "approved"
+  }
+]

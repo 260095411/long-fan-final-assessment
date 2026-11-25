@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Nov  4 18:53:19 2026
+
+@author: 32891
+"""
+
+import csv
+
+data_list = [
+    ["name", "lat", "lon"],
+    ["VIRTUS LONDON 9", "51.5198304208", "-0.0627845869517861"],
+    ["VIRTUS London 11", "51.5186807941753", "-0.0626375994278063"],
+    ["Global Technical Realty London GB One", "51.51373011518441", "-0.0618669661581519"],
+    ["London Mountain LON-3", "51.5197088289673", "-0.062020042941367"],
+    ["CyrusOne LON5", "51.5168291357466", "-0.61908864429172"],
+    ["China Mobile Slough", "51.52592348530987", "-0.633795739882555"],
+    ["Brick Lane Datacentre", "51.5204", "-0.0726"]
+]
+
+with open("data_centres.csv", "w", newline="", encoding="utf-8") as out_file:
+    writer = csv.writer(out_file)
+    writer.writerows(data_list)
+
+print("✅ CSV 文件生成成功！")

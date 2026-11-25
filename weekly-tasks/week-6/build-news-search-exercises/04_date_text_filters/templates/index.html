@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News Search</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-header"><h1>News Search</h1></header>
+    <section class="panel search-panel">
+      <form id="search-form" class="search-grid">
+        <label class="field field-wide">Search<input id="search-query" type="search" value="technology" placeholder="Search news" required></label>
+        <label class="field">Results<select id="page-size"><option value="20">20</option><option value="50" selected>50</option><option value="100">100</option></select></label>
+        <label class="field">Sort by<select id="sort-by"><option value="" selected>Default</option><option value="date">Date</option><option value="alphabet">Alphabet</option></select></label>
+        <label class="field">Date from<input id="dateFrom" type="date"></label>
+        <label class="field">Date to<input id="dateTo" type="date"></label>
+        <label class="field">Include topics<input id="includeTopics" type="text" placeholder="Separate terms with commas"></label>
+        <label class="field">Exclude topics<input id="excludeTopics" type="text" placeholder="Separate terms with commas"></label>
+        <label class="field">Include places<input id="includePlaces" type="text" placeholder="Separate terms with commas"></label>
+        <label class="field">Exclude places<input id="excludePlaces" type="text" placeholder="Separate terms with commas"></label>
+        <label class="field">Include sources<input id="includeSources" type="text" placeholder="Separate terms with commas"></label>
+        <label class="field">Exclude sources<input id="excludeSources" type="text" placeholder="Separate terms with commas"></label>
+        <button class="primary-button" type="submit">Search</button>
+      </form>
+      <p id="status" class="status" role="status" aria-live="polite">Search for a topic to see the latest articles.</p>
+    </section>
+    <section class="results-section"><div class="results-heading"><h2>Articles</h2><span id="result-count">0 articles</span></div><div id="results" class="results-grid"><p class="empty-state">Your search results will appear here.</p></div></section>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+</html>

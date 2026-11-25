@@ -1,0 +1,836 @@
+[
+  {
+    "domain": "bbc.co.uk",
+    "count": 8,
+    "average_trackers": 4.19,
+    "average_companies": 4.19,
+    "services": [
+      {
+        "name": "BBC",
+        "tracker": "bbci",
+        "category": "Hosting",
+        "owner": "Unknown",
+        "percent": 98.95
+      },
+      {
+        "name": "Optimizely",
+        "tracker": "optimizely",
+        "category": "Utilities",
+        "owner": "Optimizely",
+        "percent": 82.2
+      },
+      {
+        "name": "Dotmetrics",
+        "tracker": "dotmetrics.net",
+        "category": "Site Analytics",
+        "owner": "Ipsos",
+        "percent": 78.77
+      },
+      {
+        "name": "ScoreCard Research Beacon",
+        "tracker": "scorecard_research_beacon",
+        "category": "Site Analytics",
+        "owner": "comScore, Inc.",
+        "percent": 70.67
+      },
+      {
+        "name": "ChartBeat",
+        "tracker": "chartbeat",
+        "category": "Site Analytics",
+        "owner": "ChartBeat",
+        "percent": 66.31
+      },
+      {
+        "name": "Akamai Technologies",
+        "tracker": "akamai_technologies",
+        "category": "Hosting",
+        "owner": "Akamai Technologies",
+        "percent": 3.84
+      },
+      {
+        "name": "Google Static",
+        "tracker": "gstatic",
+        "category": "Hosting",
+        "owner": "Google",
+        "percent": 2.3
+      },
+      {
+        "name": "Google Fonts",
+        "tracker": "google_fonts",
+        "category": "Hosting",
+        "owner": "Google",
+        "percent": 1.58
+      }
+    ],
+    "categories": [
+      {
+        "name": "Hosting",
+        "count": 4
+      },
+      {
+        "name": "Site Analytics",
+        "count": 3
+      },
+      {
+        "name": "Utilities",
+        "count": 1
+      }
+    ],
+    "companies": [
+      {
+        "name": "Akamai Technologies",
+        "count": 1,
+        "services": "Akamai Technologies"
+      },
+      {
+        "name": "ChartBeat",
+        "count": 1,
+        "services": "ChartBeat"
+      },
+      {
+        "name": "Google",
+        "count": 2,
+        "services": "Google Static, Google Fonts"
+      },
+      {
+        "name": "Ipsos",
+        "count": 1,
+        "services": "Dotmetrics"
+      },
+      {
+        "name": "Optimizely",
+        "count": 1,
+        "services": "Optimizely"
+      },
+      {
+        "name": "Unknown",
+        "count": 1,
+        "services": "BBC"
+      },
+      {
+        "name": "comScore, Inc.",
+        "count": 1,
+        "services": "ScoreCard Research Beacon"
+      }
+    ],
+    "flows": [
+      {
+        "category": "Hosting",
+        "owner": "Akamai Technologies",
+        "count": 1
+      },
+      {
+        "category": "Hosting",
+        "owner": "Google",
+        "count": 2
+      },
+      {
+        "category": "Hosting",
+        "owner": "Unknown",
+        "count": 1
+      },
+      {
+        "category": "Site Analytics",
+        "owner": "ChartBeat",
+        "count": 1
+      },
+      {
+        "category": "Site Analytics",
+        "owner": "Ipsos",
+        "count": 1
+      },
+      {
+        "category": "Site Analytics",
+        "owner": "comScore, Inc.",
+        "count": 1
+      },
+      {
+        "category": "Utilities",
+        "owner": "Optimizely",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "domain": "etsy.com",
+    "count": 29,
+    "average_trackers": 4.39,
+    "average_companies": 4.14,
+    "services": [
+      {
+        "name": "Transcend Consent Management",
+        "tracker": "transcend",
+        "category": "Consent",
+        "owner": "Transcend",
+        "percent": 79.58
+      },
+      {
+        "name": "Qualtrics",
+        "tracker": "qualtrics",
+        "category": "Site Analytics",
+        "owner": "Qualtrics",
+        "percent": 53.4
+      },
+      {
+        "name": "Klarna",
+        "tracker": "klarna.com",
+        "category": "Utilities",
+        "owner": "Klarna",
+        "percent": 30.16
+      },
+      {
+        "name": "Pinterest",
+        "tracker": "pinterest",
+        "category": "Social Media",
+        "owner": "Pinterest",
+        "percent": 23.77
+      },
+      {
+        "name": "Apple Pay",
+        "tracker": "apple_pay",
+        "category": "Utilities",
+        "owner": "Apple",
+        "percent": 17.34
+      },
+      {
+        "name": "Google Tag",
+        "tracker": "google_tag",
+        "category": "Advertising",
+        "owner": "Google",
+        "percent": 15.22
+      },
+      {
+        "name": "Sentry",
+        "tracker": "sentry",
+        "category": "Utilities",
+        "owner": "Sentry",
+        "percent": 13.94
+      },
+      {
+        "name": "Facebook",
+        "tracker": "facebook",
+        "category": "Advertising",
+        "owner": "Meta",
+        "percent": 6.74
+      },
+      {
+        "name": "Google",
+        "tracker": "google",
+        "category": "Advertising",
+        "owner": "Google",
+        "percent": 4.77
+      },
+      {
+        "name": "Google Accounts",
+        "tracker": "google_accounts",
+        "category": "Utilities",
+        "owner": "Google",
+        "percent": 4.48
+      },
+      {
+        "name": "Google Marketing Platform",
+        "tracker": "doubleclick",
+        "category": "Advertising",
+        "owner": "Google",
+        "percent": 4.43
+      },
+      {
+        "name": "Microsoft Advertising",
+        "tracker": "bing_ads",
+        "category": "Advertising",
+        "owner": "Microsoft",
+        "percent": 4.4
+      },
+      {
+        "name": "TikTok Analytics",
+        "tracker": "tiktok_analytics",
+        "category": "Site Analytics",
+        "owner": "ByteDance Inc",
+        "percent": 4.33
+      },
+      {
+        "name": "Snapchat For Business",
+        "tracker": "snapchat",
+        "category": "Advertising",
+        "owner": "Snap",
+        "percent": 4.33
+      },
+      {
+        "name": "Reddit",
+        "tracker": "reddit",
+        "category": "Social Media",
+        "owner": "reddit",
+        "percent": 4.33
+      },
+      {
+        "name": "iSpot.tv",
+        "tracker": "ispot.tv",
+        "category": "Advertising",
+        "owner": "Unknown",
+        "percent": 4.3
+      },
+      {
+        "name": "Google Analytics with signals",
+        "tracker": "google_signals",
+        "category": "Advertising",
+        "owner": "Google",
+        "percent": 4.26
+      },
+      {
+        "name": "Google AdServices",
+        "tracker": "google_adservices",
+        "category": "Advertising",
+        "owner": "Google",
+        "percent": 4.2
+      },
+      {
+        "name": "TradeDesk",
+        "tracker": "tradedesk",
+        "category": "Advertising",
+        "owner": "The Trade Desk",
+        "percent": 3.57
+      },
+      {
+        "name": "Zendesk CDN",
+        "tracker": "zdassets.com",
+        "category": "Hosting",
+        "owner": "Zendesk",
+        "percent": 3.39
+      },
+      {
+        "name": "Zendesk",
+        "tracker": "zendesk",
+        "category": "Customer Interaction",
+        "owner": "Zendesk",
+        "percent": 3.0
+      },
+      {
+        "name": "Google Fonts",
+        "tracker": "google_fonts",
+        "category": "Hosting",
+        "owner": "Google",
+        "percent": 2.94
+      },
+      {
+        "name": "Amazon CloudFront",
+        "tracker": "amazon_cloudfront",
+        "category": "Hosting",
+        "owner": "Amazon",
+        "percent": 2.77
+      },
+      {
+        "name": "FullStory",
+        "tracker": "fullstory",
+        "category": "Site Analytics",
+        "owner": "fullstory",
+        "percent": 2.41
+      },
+      {
+        "name": "Honey",
+        "tracker": "joinhoney",
+        "category": "Extensions",
+        "owner": "PayPal",
+        "percent": 2.02
+      },
+      {
+        "name": "Braze",
+        "tracker": "braze",
+        "category": "Site Analytics",
+        "owner": "Braze",
+        "percent": 1.76
+      },
+      {
+        "name": "Stripe",
+        "tracker": "stripe.com",
+        "category": "Utilities",
+        "owner": "Stripe",
+        "percent": 1.43
+      },
+      {
+        "name": "Google Static",
+        "tracker": "gstatic",
+        "category": "Hosting",
+        "owner": "Google",
+        "percent": 1.07
+      },
+      {
+        "name": "Google Syndication",
+        "tracker": "google_syndication",
+        "category": "Advertising",
+        "owner": "Google",
+        "percent": 1.04
+      }
+    ],
+    "categories": [
+      {
+        "name": "Advertising",
+        "count": 11
+      },
+      {
+        "name": "Consent",
+        "count": 1
+      },
+      {
+        "name": "Customer Interaction",
+        "count": 1
+      },
+      {
+        "name": "Extensions",
+        "count": 1
+      },
+      {
+        "name": "Hosting",
+        "count": 4
+      },
+      {
+        "name": "Site Analytics",
+        "count": 4
+      },
+      {
+        "name": "Social Media",
+        "count": 2
+      },
+      {
+        "name": "Utilities",
+        "count": 5
+      }
+    ],
+    "companies": [
+      {
+        "name": "Amazon",
+        "count": 1,
+        "services": "Amazon CloudFront"
+      },
+      {
+        "name": "Apple",
+        "count": 1,
+        "services": "Apple Pay"
+      },
+      {
+        "name": "Braze",
+        "count": 1,
+        "services": "Braze"
+      },
+      {
+        "name": "ByteDance Inc",
+        "count": 1,
+        "services": "TikTok Analytics"
+      },
+      {
+        "name": "Google",
+        "count": 9,
+        "services": "Google Tag, Google, Google Accounts, Google Marketing Platform, Google Analytics with signals, Google AdServices, Google Fonts, Google Static, Google Syndication"
+      },
+      {
+        "name": "Klarna",
+        "count": 1,
+        "services": "Klarna"
+      },
+      {
+        "name": "Meta",
+        "count": 1,
+        "services": "Facebook"
+      },
+      {
+        "name": "Microsoft",
+        "count": 1,
+        "services": "Microsoft Advertising"
+      },
+      {
+        "name": "PayPal",
+        "count": 1,
+        "services": "Honey"
+      },
+      {
+        "name": "Pinterest",
+        "count": 1,
+        "services": "Pinterest"
+      },
+      {
+        "name": "Qualtrics",
+        "count": 1,
+        "services": "Qualtrics"
+      },
+      {
+        "name": "Sentry",
+        "count": 1,
+        "services": "Sentry"
+      },
+      {
+        "name": "Snap",
+        "count": 1,
+        "services": "Snapchat For Business"
+      },
+      {
+        "name": "Stripe",
+        "count": 1,
+        "services": "Stripe"
+      },
+      {
+        "name": "The Trade Desk",
+        "count": 1,
+        "services": "TradeDesk"
+      },
+      {
+        "name": "Transcend",
+        "count": 1,
+        "services": "Transcend Consent Management"
+      },
+      {
+        "name": "Unknown",
+        "count": 1,
+        "services": "iSpot.tv"
+      },
+      {
+        "name": "Zendesk",
+        "count": 2,
+        "services": "Zendesk CDN, Zendesk"
+      },
+      {
+        "name": "fullstory",
+        "count": 1,
+        "services": "FullStory"
+      },
+      {
+        "name": "reddit",
+        "count": 1,
+        "services": "Reddit"
+      }
+    ],
+    "flows": [
+      {
+        "category": "Advertising",
+        "owner": "Google",
+        "count": 6
+      },
+      {
+        "category": "Advertising",
+        "owner": "Meta",
+        "count": 1
+      },
+      {
+        "category": "Advertising",
+        "owner": "Microsoft",
+        "count": 1
+      },
+      {
+        "category": "Advertising",
+        "owner": "Snap",
+        "count": 1
+      },
+      {
+        "category": "Advertising",
+        "owner": "The Trade Desk",
+        "count": 1
+      },
+      {
+        "category": "Advertising",
+        "owner": "Unknown",
+        "count": 1
+      },
+      {
+        "category": "Consent",
+        "owner": "Transcend",
+        "count": 1
+      },
+      {
+        "category": "Customer Interaction",
+        "owner": "Zendesk",
+        "count": 1
+      },
+      {
+        "category": "Extensions",
+        "owner": "PayPal",
+        "count": 1
+      },
+      {
+        "category": "Hosting",
+        "owner": "Amazon",
+        "count": 1
+      },
+      {
+        "category": "Hosting",
+        "owner": "Google",
+        "count": 2
+      },
+      {
+        "category": "Hosting",
+        "owner": "Zendesk",
+        "count": 1
+      },
+      {
+        "category": "Site Analytics",
+        "owner": "Braze",
+        "count": 1
+      },
+      {
+        "category": "Site Analytics",
+        "owner": "ByteDance Inc",
+        "count": 1
+      },
+      {
+        "category": "Site Analytics",
+        "owner": "Qualtrics",
+        "count": 1
+      },
+      {
+        "category": "Site Analytics",
+        "owner": "fullstory",
+        "count": 1
+      },
+      {
+        "category": "Social Media",
+        "owner": "Pinterest",
+        "count": 1
+      },
+      {
+        "category": "Social Media",
+        "owner": "reddit",
+        "count": 1
+      },
+      {
+        "category": "Utilities",
+        "owner": "Apple",
+        "count": 1
+      },
+      {
+        "category": "Utilities",
+        "owner": "Google",
+        "count": 1
+      },
+      {
+        "category": "Utilities",
+        "owner": "Klarna",
+        "count": 1
+      },
+      {
+        "category": "Utilities",
+        "owner": "Sentry",
+        "count": 1
+      },
+      {
+        "category": "Utilities",
+        "owner": "Stripe",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "domain": "claude.ai",
+    "count": 14,
+    "average_trackers": 2.13,
+    "average_companies": 1.88,
+    "services": [
+      {
+        "name": "hCaptcha",
+        "tracker": "hcaptcha",
+        "category": "Utilities",
+        "owner": "Intuition Machines",
+        "percent": 22.28
+      },
+      {
+        "name": "Google Accounts",
+        "tracker": "google_accounts",
+        "category": "Utilities",
+        "owner": "Google",
+        "percent": 16.67
+      },
+      {
+        "name": "Google Static",
+        "tracker": "gstatic",
+        "category": "Hosting",
+        "owner": "Google",
+        "percent": 14.94
+      },
+      {
+        "name": "Google Fonts",
+        "tracker": "google_fonts",
+        "category": "Hosting",
+        "owner": "Google",
+        "percent": 9.73
+      },
+      {
+        "name": "Google",
+        "tracker": "google",
+        "category": "Advertising",
+        "owner": "Google",
+        "percent": 9.55
+      },
+      {
+        "name": "Google APIs",
+        "tracker": "googleapis.com",
+        "category": "Hosting",
+        "owner": "Google",
+        "percent": 8.56
+      },
+      {
+        "name": "Cloudflare",
+        "tracker": "cloudflare",
+        "category": "Hosting",
+        "owner": "Cloudflare",
+        "percent": 8.06
+      },
+      {
+        "name": "Datadog",
+        "tracker": "datadog",
+        "category": "Utilities",
+        "owner": "Datadog",
+        "percent": 7.6
+      },
+      {
+        "name": "Intercom",
+        "tracker": "intercom",
+        "category": "Customer Interaction",
+        "owner": "Intercom",
+        "percent": 6.79
+      },
+      {
+        "name": "Google Tag",
+        "tracker": "google_tag",
+        "category": "Advertising",
+        "owner": "Google",
+        "percent": 3.25
+      },
+      {
+        "name": "Stripe",
+        "tracker": "stripe.com",
+        "category": "Utilities",
+        "owner": "Stripe",
+        "percent": 3.05
+      },
+      {
+        "name": "jsDelivr",
+        "tracker": "jsdelivr",
+        "category": "Hosting",
+        "owner": "Unknown",
+        "percent": 1.21
+      },
+      {
+        "name": "unpkg",
+        "tracker": "unpkg.com",
+        "category": "Hosting",
+        "owner": "unpkg",
+        "percent": 1.1
+      },
+      {
+        "name": "Google Marketing Platform",
+        "tracker": "doubleclick",
+        "category": "Advertising",
+        "owner": "Google",
+        "percent": 1.0
+      }
+    ],
+    "categories": [
+      {
+        "name": "Advertising",
+        "count": 3
+      },
+      {
+        "name": "Customer Interaction",
+        "count": 1
+      },
+      {
+        "name": "Hosting",
+        "count": 6
+      },
+      {
+        "name": "Utilities",
+        "count": 4
+      }
+    ],
+    "companies": [
+      {
+        "name": "Cloudflare",
+        "count": 1,
+        "services": "Cloudflare"
+      },
+      {
+        "name": "Datadog",
+        "count": 1,
+        "services": "Datadog"
+      },
+      {
+        "name": "Google",
+        "count": 7,
+        "services": "Google Accounts, Google Static, Google Fonts, Google, Google APIs, Google Tag, Google Marketing Platform"
+      },
+      {
+        "name": "Intercom",
+        "count": 1,
+        "services": "Intercom"
+      },
+      {
+        "name": "Intuition Machines",
+        "count": 1,
+        "services": "hCaptcha"
+      },
+      {
+        "name": "Stripe",
+        "count": 1,
+        "services": "Stripe"
+      },
+      {
+        "name": "Unknown",
+        "count": 1,
+        "services": "jsDelivr"
+      },
+      {
+        "name": "unpkg",
+        "count": 1,
+        "services": "unpkg"
+      }
+    ],
+    "flows": [
+      {
+        "category": "Advertising",
+        "owner": "Google",
+        "count": 3
+      },
+      {
+        "category": "Customer Interaction",
+        "owner": "Intercom",
+        "count": 1
+      },
+      {
+        "category": "Hosting",
+        "owner": "Cloudflare",
+        "count": 1
+      },
+      {
+        "category": "Hosting",
+        "owner": "Google",
+        "count": 3
+      },
+      {
+        "category": "Hosting",
+        "owner": "Unknown",
+        "count": 1
+      },
+      {
+        "category": "Hosting",
+        "owner": "unpkg",
+        "count": 1
+      },
+      {
+        "category": "Utilities",
+        "owner": "Datadog",
+        "count": 1
+      },
+      {
+        "category": "Utilities",
+        "owner": "Google",
+        "count": 1
+      },
+      {
+        "category": "Utilities",
+        "owner": "Intuition Machines",
+        "count": 1
+      },
+      {
+        "category": "Utilities",
+        "owner": "Stripe",
+        "count": 1
+      }
+    ]
+  }
+]

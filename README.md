@@ -43,13 +43,13 @@ long-fan-final-assessment/
 │   ├── research-summary.md       ← the short research summary requested in tutorial
 │   ├── data-flow-diagram.md      ← the six-hop flow in text form
 │   └── screenshots/              ← rendered states of the prototype
-├── weekly-tasks/                 ← five selected weekly tasks
+├── weekly-tasks/                 ← five tasks I produced in Weeks 3–7
 │   ├── README.md                 ← why these five
-│   ├── week-2-click-counter/
-│   ├── week-3-record-clicks/
-│   ├── week-3-python-analysis/
-│   ├── week-6-ranked-search/
-│   └── week-7-gate-wireframe/
+│   ├── week-3/                   ← click recorder + Python parsing + observations
+│   ├── week-4/                   ← archival indexing exercise
+│   ├── week-5/                   ← data centre walk + Street View + Python analysis
+│   ├── week-6/                   ← Flask news search: sort, relevance, filters
+│   └── week-7/                   ← prototype analysis + journey diagram
 └── .github/workflows/pages.yml   ← publishes prototype/ to GitHub Pages
 ```
 
@@ -145,13 +145,14 @@ Open https://260095411.github.io/long-fan-final-assessment/ in a browser. Nothin
 
 ## 7. AI disclosure
 
-A summary is included in the report PDF. In short: the prototype's code scaffolding, the drafting of
-interface copy, and the code for the five weekly tasks were produced with an AI assistant
-(Doubao). The research question, the selection of sources, the choice of the two arrangements and the
-argument in the report were directed and revised by me. Sources were checked against the
-Knight-Georgetown Institute report (2026), Ofcom's age assurance guidance and the ICO's guidance.
-No AI tool generated any claim that is not traceable to a cited source or labelled as uncertain in
-the prototype.
+A summary is included in the report PDF. In short: the prototype's HTML/CSS/JavaScript scaffolding,
+the drafting of interface copy, and a first draft of the report were produced with an AI assistant
+(Doubao). The five weekly tasks in `weekly-tasks/` are my own coursework from Weeks 3–7 and were not
+generated for this submission. The research question, the selection of sources, the choice of the two
+arrangements and the argument in the report were directed and revised by me. Sources were checked
+against the Knight-Georgetown Institute report (2026), Ofcom's age assurance guidance and the ICO's
+guidance. No AI tool generated any claim that is not traceable to a cited source or labelled as
+uncertain in the prototype.
 
 ---
 
