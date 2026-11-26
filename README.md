@@ -1,6 +1,6 @@
-# Long Fan — Critical Coding Practices — Final Assessment
+https://260095411.github.io/long-fan-final-assessment/
 
-**Working prototype (GitHub Pages):** https://260095411.github.io/long-fan-final-assessment/
+# Long Fan — Critical Coding Practices — Final Assessment
 
 > If the link is temporarily unavailable, GitHub Pages may still be building; the deployment status is visible in the repository's Actions tab.
 

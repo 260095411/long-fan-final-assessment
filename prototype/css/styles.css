@@ -344,10 +344,78 @@ body.no-anim *,
 body.no-anim *::before,
 body.no-anim *::after { transition: none !important; animation: none !important; }
 
+/* ---------- research summary ---------- */
+.summary-box {
+  margin: 44px 0 0;
+  padding: 22px 26px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  background: #fff;
+}
+.summary-box .tag {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.summary-box h2 { font-size: 20px; margin: 0 0 12px; }
+.summary-box p { margin: 0 0 10px; font-size: 14.5px; color: #35322a; }
+.summary-box p:last-child { margin-bottom: 0; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
   .stage { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
   .section { padding: 44px 0; }
   .site-header { padding: 40px 0 28px; }
+}
+
+@media (max-width: 640px) {
+  body { overflow-x: hidden; }
+  .wrap { width: 90vw; }
+  .site-header { padding: 30px 0 24px; }
+  .kicker { font-size: 10px; letter-spacing: .08em; margin-bottom: 14px; }
+  h1 { font-size: 30px; }
+  .lede { font-size: 15.5px; line-height: 1.55; }
+  .disclaimer { font-size: 11px; padding-left: 10px; }
+  .site-nav .wrap { gap: 16px; }
+  .site-nav a { font-size: 11px; }
+  .section { padding: 34px 0; }
+  .section-head { gap: 10px; }
+  .num { font-size: 10px; padding: 2px 7px; margin-top: 4px; }
+  h2 { font-size: 21px; }
+  .section-sub { font-size: 13.5px; }
+  h3 { font-size: 16px; }
+  .controls { gap: 14px 16px; }
+  .control-label { font-size: 10px; letter-spacing: .08em; }
+  .chip { font-size: 12px; padding: 6px 10px; }
+  .btn { font-size: 12.5px; padding: 8px 12px; }
+  .seg { font-size: 11.5px; padding: 7px 10px; }
+  .stage { gap: 14px; }
+  .panel-title, .panel-meta { font-size: 10px; }
+  .gate-screen h3 { font-size: 17px; }
+  .gate-copy { font-size: 13px; }
+  .node { font-size: 10.5px; padding: 5px 7px; }
+  .arrow { font-size: 10px; }
+  .meter span { font-size: 17px; }
+  .meters { gap: 14px; }
+  .summary-box { margin-top: 30px; padding: 16px 18px; }
+  .summary-box h2 { font-size: 17px; }
+  .summary-box p { font-size: 13px; }
+  .claim-box { padding: 16px 18px; }
+  .claim-box p { font-size: 13.5px; }
+  .card { padding: 14px 16px; }
+  .plain-list li { font-size: 12.5px; }
+  .table-wrap table { min-width: 520px; }
+  th, td { padding: 9px 10px; font-size: 12px; }
+  .callout { padding: 18px; }
+  .callout h3 { font-size: 16px; }
+  .callout p { font-size: 13px; }
+  .qa-list { gap: 8px; }
+  .source-list li { font-size: 12px; }
+  .disclaimer, .src-link, .summary-box p { overflow-wrap: anywhere; }
 }
