@@ -24,12 +24,20 @@ document still left the browser, and a record of the decision still exists somew
 
 ## 2. Where the data goes (see `data-flow-diagram.md`)
 
-Six hops: the visitor requests the page → the service returns a gate → the visitor submits a signal to a
-third-party evaluator → the evaluator derives an estimate and writes a record → the evaluator returns a
-threshold result → the service grants or denies access.
+No single flow covers all three methods. Ofcom treats facial age estimation, photo-ID matching and
+payment checks as separate methods capable of being highly effective at 18, and the published provider
+documentation describes different exchanges for each:
 
-The interesting asymmetry sits between hop 3 and hop 5. Everything that identifies a person happens at
-hop 3; everything the person is told about happens at hop 5.
+- **Selfie** — the image frames and a site identifier go to an estimation provider, which returns a
+  threshold and keeps a record.
+- **Photo ID** — a document image, a selfie, a document number and a date of birth go to a checking
+  company, which returns a verdict and sometimes the date of birth itself.
+- **Card** — card details go to a payment processor for a £1 test authorisation; the issuing bank adds
+  its own challenge; the service ends up holding a token and a verified flag, and never an age.
+
+The shared asymmetry is that everything identifying happens before the answer, and the answer is all the
+person is told. The difference is what that answer costs: a birth date in one case, a payment instrument
+in another, a deleted image in the third.
 
 ## 3. What is contested, and what is open
 

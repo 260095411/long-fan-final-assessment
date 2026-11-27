@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The Yes/No Contract — age assurance prototype</title>
+<title>The Yes/No Contract</title>
 <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -12,18 +12,17 @@
   <div class="wrap">
     <p class="kicker">MA Internet Equalities · Critical Coding Practices · Stack 2</p>
     <h1>The Yes/No Contract</h1>
-    <p class="lede">An age gate advertises a single bit: <em>over 18</em>, or not.
-      This prototype follows that bit backwards, to the moment a face or a document
-      leaves the browser, and forwards again, to the moment a person is refused with no way to answer back.</p>
-    <p class="disclaimer">Simulated data only. No photographs, documents or personal details are collected or transmitted. Every uncertain step is labelled as uncertain.</p>
+    <p class="lede">An age gate asks one question and returns one answer. Behind that answer, a face, a document
+      or a card leaves the browser. This page runs the three checks and shows what each one sends, keeps and
+      returns.</p>
   </div>
 </header>
 
 <nav class="site-nav">
   <div class="wrap">
     <a href="#gate">1 · The gate</a>
-    <a href="#issue">2 · The issue</a>
-    <a href="#evidence">3 · Evidence</a>
+    <a href="#exchanges">2 · Three exchanges</a>
+    <a href="#notes">3 · Notes</a>
     <a href="#unresolved">4 · Unresolved</a>
     <a href="#sources">5 · Sources</a>
   </div>
@@ -31,23 +30,13 @@
 
 <main class="wrap">
 
-  <!-- ============ 0. RESEARCH SUMMARY ============ -->
-  <div class="summary-box" id="summary">
-    <span class="tag">Research summary</span>
-    <h2>What the reading established, in four moves</h2>
-    <p>Age assurance is now a duty on services likely to be accessed by children under the Online Safety Act, and Ofcom's guidance asks providers to judge a method on four criteria — technical accuracy, robustness, reliability and fairness — plus two principles, accessibility and interoperability.</p>
-    <p>Knight-Georgetown Institute (2026) tested the methods actually on the market and concluded that no single signal satisfies all four of its own criteria — baseline accuracy, circumvention resistance, availability and privacy. Accuracy is bought with availability, or with privacy, and never all at once.</p>
-    <p>ICO guidance adds a narrower obligation: consent must be freely given, specific and informed, and the Age Appropriate Design Code asks for a design decision made in the child's interest, not a legal tick.</p>
-    <p>The question this prototype pursues follows from that gap: if the answer arrives as a single bit, what was captured, what was kept, and what a person can do when the bit is wrong.</p>
-  </div>
-
   <!-- ============ 1. GATE ============ -->
   <section id="gate" class="section">
     <div class="section-head">
       <span class="num">01</span>
       <div>
         <h2>The gate, and what it exchanges</h2>
-        <p class="section-sub">Choose a check, run it, and watch the request cross three parties. Then switch the arrangement and run it again.</p>
+        <p class="section-sub">Choose a check, click through the gate, then reveal what happens behind it.</p>
       </div>
     </div>
 
@@ -59,123 +48,128 @@
       <div class="control-group">
         <label class="control-label">Arrangement</label>
         <div class="segmented" role="tablist">
-          <button class="seg is-active" data-view="default" role="tab">View A · As deployed</button>
-          <button class="seg" data-view="reworked" role="tab">View B · Credential</button>
+          <button class="seg is-active" data-view="default" role="tab">As deployed</button>
+          <button class="seg" data-view="reworked" role="tab">With a proof</button>
         </div>
       </div>
       <div class="control-group control-actions">
         <button id="run" class="btn btn-primary">Run the check</button>
-        <button id="wrong" class="btn btn-ghost" title="Simulate a correct adult being estimated as under 18">Simulate a false rejection</button>
+        <button id="wrong" class="btn btn-ghost" title="A 17-year-old, refused at the end of the check">Refuse an under-18</button>
         <button id="reset" class="btn btn-ghost">Reset</button>
       </div>
     </div>
 
-    <div class="stage">
+    <div class="ref-strip">
+      <span class="ref-label">Documented reference</span>
+      <div class="ref-body">
+        <strong id="ref-product">Yoti Age Estimation</strong>
+        <span id="ref-detail">Selfie captured on the device; the business receives a threshold result.</span>
+        <a id="ref-link" class="src-link" href="https://support.yoti.com/article-detail?articleId=ka0Py00000087WHIAY" target="_blank" rel="noopener">documentation ↗</a>
+      </div>
+    </div>
+
+    <div class="reveal-bar">
+      <div class="reveal-copy">
+        Left: <strong>what the visitor sees</strong>. Right: <strong>what runs behind it</strong>, masked until revealed.
+      </div>
+      <button id="reveal" class="btn btn-ghost reveal-btn" aria-pressed="false">Reveal the backend</button>
+    </div>
+
+    <div id="stage" class="stage">
       <aside class="panel gate-panel">
         <div class="panel-head">
           <span class="dot-row"><i></i><i></i><i></i></span>
-          <span class="panel-title">reading-room.example / watch</span>
+          <span class="panel-title" id="gate-host">reading-room.example / watch</span>
         </div>
         <div class="panel-body">
-          <div id="gate-screen" class="gate-screen">
-            <p class="gate-eyebrow">Restricted · 18+</p>
-            <h3 id="gate-title">Confirm your age to watch</h3>
-            <p id="gate-copy" class="gate-copy">We only receive a yes or no answer. Choose a method to continue.</p>
-            <div id="gate-actions" class="gate-actions">
-              <span class="ghost-field">Method</span>
-              <span class="ghost-field">Consent</span>
-              <button class="btn btn-primary" disabled>Verify</button>
-            </div>
-            <div id="gate-result" class="gate-result" hidden></div>
-          </div>
+          <div id="gate-screen" class="gate-screen"></div>
           <div id="gate-content" class="gate-content is-locked">
             <div class="content-stub"></div>
             <div class="content-stub"></div>
             <div class="content-stub short"></div>
             <p class="locked-note">Content withheld until a decision is returned.</p>
+          </div>
         </div>
       </aside>
 
       <div class="panel flow-panel">
         <div class="panel-head">
           <span class="panel-title">Behind the gate</span>
-          <span id="view-label" class="panel-meta">View A · As deployed</span>
+          <span id="view-label" class="panel-meta">As deployed</span>
         </div>
         <div class="panel-body">
+          <div id="flow-gap" class="flow-gap"></div>
           <div id="flow-chain" class="flow-chain"></div>
+          <div class="legend">
+            <span class="legend-item"><i class="sw sw-see"></i>what the visitor sees</span>
+            <span class="legend-item"><i class="sw sw-behind"></i>what runs behind</span>
+          </div>
           <div id="flow-steps" class="flow-steps"></div>
           <div class="meters">
             <div class="meter"><span id="meter-fields">0</span><label>fields on the wire</label></div>
             <div class="meter"><span id="meter-parties">0</span><label>parties involved</label></div>
             <div class="meter"><span id="meter-records">0</span><label>records created</label></div>
-            <div class="meter"><span id="meter-denied">0</span><label>adults refused</label></div>
+            <div class="meter"><span id="meter-denied">0</span><label>refused at the gate</label></div>
           </div>
         </div>
       </div>
     </div>
 
-    <p class="stage-caption" id="stage-caption">Press <strong>Run the check</strong> to step through the exchange.</p>
+    <p class="stage-caption" id="stage-caption">Click the gate's button to step through the exchange, screen by screen.</p>
   </section>
 
-  <!-- ============ 2. ISSUE ============ -->
-  <section id="issue" class="section">
+  <!-- ============ 2. EXCHANGES ============ -->
+  <section id="exchanges" class="section">
     <div class="section-head">
       <span class="num">02</span>
       <div>
-        <h2>The issue this prototype investigates</h2>
-        <p class="section-sub">Not whether age checks are good or bad. One specific thing: the binary answer conceals both the record and the error.</p>
+        <h2>Three checks, three exchanges</h2>
       </div>
+    </div>
+
+    <div class="cases">
+      <p class="cases-label">Cases I met</p>
+      <div id="case-list" class="case-list"></div>
     </div>
 
     <div class="claim-box">
-      <p><strong>Claim.</strong> An age gate presents a threshold — a single bit — as if it were the whole exchange.
-        But the bit is produced by a third-party evaluator that received an image or a document,
-        is stored by the service against an account, and is returned as a decision the person cannot inspect or contest.
-        The threshold format is a <em>privacy claim</em> and a <em>dispute-suppression device</em> at the same time.</p>
+      <p>A yes or no answer is the last step of a check, and the only step the visitor is shown. Everything
+        before it — frames, a document image, a card, a call to a bank — is recorded elsewhere. When the answer
+        is wrong, the person meets the same screen as a correct refusal.</p>
     </div>
 
-    <div class="grid-2">
-      <div class="card">
-        <h3>What the interface shows</h3>
-        <ul id="visible-list" class="plain-list"></ul>
-      </div>
-      <div class="card">
-        <h3>What it does not show</h3>
-        <ul id="hidden-list" class="plain-list muted-list"></ul>
-      </div>
-    </div>
-
-    <h3 class="sub-head">Two arrangements, compared</h3>
     <div class="table-wrap">
-      <table id="comparison-table" class="compare">
-        <thead><tr><th>Dimension</th><th>View A · As deployed</th><th>View B · Credential</th></tr></thead>
+      <table id="method-table" class="compare method-table">
+        <thead><tr id="method-head"></tr></thead>
         <tbody></tbody>
       </table>
     </div>
-    <p class="reading-note" id="reading-note"></p>
-
-    <div class="callout">
-      <h3>Why a working website does not prove the claim</h3>
-      <p>A prototype shows that a flow <em>can</em> be arranged this way. It cannot show that one arrangement is safer,
-        fairer or more consentful. Those claims rest on the evidence below, and on what the evidence does not establish.
-        The purpose here is to make the exchange visible, not to recommend View B.</p>
-    </div>
+    <p class="reading-note" id="method-reading"></p>
   </section>
 
-  <!-- ============ 3. EVIDENCE ============ -->
-  <section id="evidence" class="section">
+  <!-- ============ 3. NOTES ============ -->
+  <section id="notes" class="section">
     <div class="section-head">
       <span class="num">03</span>
       <div>
-        <h2>Evidence</h2>
-        <p class="section-sub">Each claim in the prototype is tied to a source, and each source is tied to a limit.</p>
+        <h2>Notes</h2>
       </div>
     </div>
-    <div class="table-wrap">
-      <table id="evidence-table" class="evidence">
-        <thead><tr><th>Claim in the prototype</th><th>Source</th><th>What this establishes</th></tr></thead>
-        <tbody></tbody>
-      </table>
+
+    <div class="notes-body">
+      <p><strong>Why these three.</strong> Ofcom lists seven methods as capable of being highly effective at 18:
+        credit card checks, digital identity services, email-based age estimation, facial age estimation,
+        mobile-network checks, open banking and photo-ID matching. Three are used here. Face scanning in the
+        background, and “Face ID already knows your age”, are left out, because no public documentation shows
+        them returning an age.</p>
+
+      <p><strong>Where the hops come from.</strong> Each hop names the product it was copied from and quotes that
+        product's own text — Yoti's selfie check as it runs inside Instagram, Yoti's document check, Steam's
+        card check. What each source settles, and what it leaves open, is listed below.</p>
+
+      <p><strong>The second arrangement.</strong> “With a proof” replaces the capture at the gate with a reusable
+        claim held in a wallet or a bank app. The gate looks the same; what changes is who has to be trusted, and
+        how much is left behind.</p>
     </div>
   </section>
 
@@ -184,8 +178,8 @@
     <div class="section-head">
       <span class="num">04</span>
       <div>
-        <h2>What remains unresolved</h2>
-        <p class="section-sub">Questions the prototype raises and cannot answer.</p>
+        <h2>Still unresolved</h2>
+        <p class="section-sub">Questions the three services raise and do not answer.</p>
       </div>
     </div>
     <div id="unresolved-list" class="qa-list"></div>
@@ -197,13 +191,13 @@
       <span class="num">05</span>
       <div>
         <h2>Sources</h2>
-        <p class="section-sub">Harvard style, as required by UAL.</p>
+        <p class="section-sub">The services I quoted, and the published material.</p>
       </div>
     </div>
-    <ol id="source-list" class="source-list"></ol>
+    <div id="source-groups" class="source-groups"></div>
+
     <footer class="site-footer">
       <p>Long Fan · MA Internet Equalities · Critical Coding Practices · 2026</p>
-      <p class="tiny">Prototype built with HTML, CSS and JavaScript reading a local dataset. No backend, no analytics, no cookies.</p>
     </footer>
   </section>
 
